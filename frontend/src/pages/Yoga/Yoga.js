@@ -123,9 +123,9 @@ function Yoga() {
     const poseClassifier = await tf.loadLayersModel('https://models.s3.jp-tok.cloud-object-storage.appdomain.cloud/model.json')
     const countAudio = new Audio(count)
     countAudio.loop = true
-    interval = setInterval(() => { 
-        detectPose(detector, poseClassifier, countAudio)
-    }, 100)
+    // interval = setInterval(() => { 
+    //     detectPose(detector, poseClassifier, countAudio)
+    // }, 100)
   }
 
   const detectPose = async (detector, poseClassifier, countAudio) => {
