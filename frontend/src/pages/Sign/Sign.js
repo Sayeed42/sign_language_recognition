@@ -7,7 +7,7 @@ import { count } from '../../utils/music';
  
 import Instructions from '../../components/Instrctions/Instructions';
 
-import './Yoga.css'
+import './Sign.css'
  
 import DropDown from '../../components/DropDown/DropDown';
 import { poseImages } from '../../utils/pose_images';
@@ -29,7 +29,7 @@ let interval
 let flag = false
 
 
-function Yoga() {
+function Sign() {
   const webcamRef = useRef(null)
   const canvasRef = useRef(null)
 
@@ -198,7 +198,7 @@ function Yoga() {
     }
   }
 
-  function startYoga(){
+  function startSign(){
     setIsStartPose(true) 
     runMovenet()
   } 
@@ -212,7 +212,7 @@ function Yoga() {
 
   if(isStartPose) {
     return (
-      <div className="yoga-container">
+      <div className="sign-container">
         <div className="performance-container">
             <div className="pose-performance">
               <h4>Pose Time: {poseTime} s</h4>
@@ -266,7 +266,7 @@ function Yoga() {
 
   return (
     <div
-      className="yoga-container"
+      className="sign-container"
     >
       <DropDown
         poseList={poseList}
@@ -277,11 +277,11 @@ function Yoga() {
           currentPose={currentPose}
         />
       <button
-          onClick={startYoga}
+          onClick={startSign}
           className="secondary-btn"    
         >Start Pose</button>
     </div>
   )
 }
 
-export default Yoga
+export default Sign
