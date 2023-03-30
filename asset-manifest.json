@@ -1,9 +1,8 @@
 {
   "files": {
-    "main.css": "/sign_language_recognition/static/css/main.548186e7.css",
-    "main.js": "/sign_language_recognition/static/js/main.5b5e941d.js",
-    "static/js/787.593e211c.chunk.js": "/sign_language_recognition/static/js/787.593e211c.chunk.js",
-    "static/media/count.wav": "/sign_language_recognition/static/media/count.f89c5fa1380233c226e7.wav",
+    "main.css": "/sign_language_recognition/static/css/main.2cdb9fb4.css",
+    "main.js": "/sign_language_recognition/static/js/main.64972bab.js",
+    "static/media/intro.png": "/sign_language_recognition/static/media/intro.12c5e4815c0931f8fe5e.png",
     "static/media/E.png": "/sign_language_recognition/static/media/E.6a4458a0aa0a756ac15d.png",
     "static/media/M.png": "/sign_language_recognition/static/media/M.f72934a4373dd0421ec0.png",
     "static/media/S.png": "/sign_language_recognition/static/media/S.fabca2b311d41b948ffe.png",
@@ -12,13 +11,13 @@
     "static/media/R.png": "/sign_language_recognition/static/media/R.dc64dd8639108fcf92a6.png",
     "static/media/N.png": "/sign_language_recognition/static/media/N.4eae023c23fe2dfcd4c9.png",
     "static/media/G.png": "/sign_language_recognition/static/media/G.034ce379218199ee3d88.png",
+    "static/media/H.png": "/sign_language_recognition/static/media/H.fcdf71756175ef022e14.png",
     "index.html": "/sign_language_recognition/index.html",
-    "main.548186e7.css.map": "/sign_language_recognition/static/css/main.548186e7.css.map",
-    "main.5b5e941d.js.map": "/sign_language_recognition/static/js/main.5b5e941d.js.map",
-    "787.593e211c.chunk.js.map": "/sign_language_recognition/static/js/787.593e211c.chunk.js.map"
+    "main.2cdb9fb4.css.map": "/sign_language_recognition/static/css/main.2cdb9fb4.css.map",
+    "main.64972bab.js.map": "/sign_language_recognition/static/js/main.64972bab.js.map"
   },
   "entrypoints": [
-    "static/css/main.548186e7.css",
-    "static/js/main.5b5e941d.js"
+    "static/css/main.2cdb9fb4.css",
+    "static/js/main.64972bab.js"
   ]
 }
