@@ -1,8 +1,9 @@
 {
   "files": {
     "main.css": "/sign_language_recognition/static/css/main.2cdb9fb4.css",
-    "main.js": "/sign_language_recognition/static/js/main.64972bab.js",
+    "main.js": "/sign_language_recognition/static/js/main.57acc613.js",
     "static/media/intro.png": "/sign_language_recognition/static/media/intro.12c5e4815c0931f8fe5e.png",
+    "static/media/A.png": "/sign_language_recognition/static/media/A.be1f02cf527a9c85bbcb.png",
     "static/media/E.png": "/sign_language_recognition/static/media/E.6a4458a0aa0a756ac15d.png",
     "static/media/M.png": "/sign_language_recognition/static/media/M.f72934a4373dd0421ec0.png",
     "static/media/S.png": "/sign_language_recognition/static/media/S.fabca2b311d41b948ffe.png",
@@ -10,14 +11,15 @@
     "static/media/T.png": "/sign_language_recognition/static/media/T.dda33b6e8c30738ce11d.png",
     "static/media/R.png": "/sign_language_recognition/static/media/R.dc64dd8639108fcf92a6.png",
     "static/media/N.png": "/sign_language_recognition/static/media/N.4eae023c23fe2dfcd4c9.png",
+    "static/media/P.png": "/sign_language_recognition/static/media/P.47ef52fc75ee1e51976b.png",
     "static/media/G.png": "/sign_language_recognition/static/media/G.034ce379218199ee3d88.png",
     "static/media/H.png": "/sign_language_recognition/static/media/H.fcdf71756175ef022e14.png",
     "index.html": "/sign_language_recognition/index.html",
     "main.2cdb9fb4.css.map": "/sign_language_recognition/static/css/main.2cdb9fb4.css.map",
-    "main.64972bab.js.map": "/sign_language_recognition/static/js/main.64972bab.js.map"
+    "main.57acc613.js.map": "/sign_language_recognition/static/js/main.57acc613.js.map"
   },
   "entrypoints": [
     "static/css/main.2cdb9fb4.css",
-    "static/js/main.64972bab.js"
+    "static/js/main.57acc613.js"
   ]
 }
