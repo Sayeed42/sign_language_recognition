@@ -31,6 +31,54 @@ const CLASS_NO = {
 4:'P',
 }
 
+const style1 = {
+  0: { color: "yellow", size: 15 },
+  1: { color: "gold", size: 6 },
+  2: { color: "green", size: 10 },
+  3: { color: "gold", size: 6 },
+  4: { color: "gold", size: 6 },
+  5: { color: "purple", size: 10 },
+  6: { color: "gold", size: 6 },
+  7: { color: "gold", size: 6 },
+  8: { color: "gold", size: 6 },
+  9: { color: "blue", size: 10 },
+  10: { color: "gold", size: 6 },
+  11: { color: "gold", size: 6 },
+  12: { color: "gold", size: 6 },
+  13: { color: "red", size: 10 },
+  14: { color: "gold", size: 6 },
+  15: { color: "gold", size: 6 },
+  16: { color: "gold", size: 6 },
+  17: { color: "orange", size: 10 },
+  18: { color: "gold", size: 6 },
+  19: { color: "gold", size: 6 },
+  20: { color: "gold", size: 6 },
+};
+
+const style2 = {
+  0: { color: "green", size: 15 },
+  1: { color: "green", size: 6 },
+  2: { color: "green", size: 10 },
+  3: { color: "green", size: 6 },
+  4: { color: "green", size: 6 },
+  5: { color: "green", size: 10 },
+  6: { color: "green", size: 6 },
+  7: { color: "green", size: 6 },
+  8: { color: "green", size: 6 },
+  9: { color: "green", size: 10 },
+  10: { color: "green", size: 6 },
+  11: { color: "green", size: 6 },
+  12: { color: "green", size: 6 },
+  13: { color: "green", size: 10 },
+  14: { color: "green", size: 6 },
+  15: { color: "green", size: 6 },
+  16: { color: "green", size: 6 },
+  17: { color: "green", size: 10 },
+  18: { color: "green", size: 6 },
+  19: { color: "green", size: 6 },
+  20: { color: "green", size: 6 },
+};
+
 function App2() {
   const webcamRef = useRef(null)
   const canvasRef = useRef(null)
@@ -99,20 +147,35 @@ function App2() {
           classification_feature.push(y - bbox.topLeft[1])     
         }
       }
+      let pred =''
       // console.log(classification_feature)
       if (classification_feature.length === 42) {
         console.log(' perform classification')
         const classification = await poseClassifier.predict(tf.reshape(classification_feature, [1,42]))
         // await classification.array().then(array => console.log(array[0].indexOf(Math.max(...array[0]))));
         classification.array().then(array => console.log(array[0]));
-        await classification.array().then(array => setBestPerform(CLASS_NO[array[0].indexOf(Math.max(...array[0]))]));
+        await classification.array().then(array => {pred = CLASS_NO[array[0].indexOf(Math.max(...array[0]))]});
+        setBestPerform(pred)
         // console.log(classification[1].dataSync())
         console.log('classification done')
+      }
+      else{
+        setBestPerform('')
       }
       setCurrentPose(currentPose)
       // Draw mesh
       const ctx = canvasRef.current.getContext("2d");
-      drawHand(hand, ctx);
+      console.log(pred)
+      console.log(currentPose)
+      if (pred === currentPose)
+      {
+        drawHand(hand, ctx, style2);
+      }
+      else
+      {
+        drawHand(hand, ctx, style1);
+      }
+      
     }
   };
 
