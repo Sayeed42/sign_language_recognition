@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/sign_language_recognition/frontend/static/css/main.6e469721.css",
-    "main.js": "/sign_language_recognition/frontend/static/js/main.9f50d922.js",
+    "main.js": "/sign_language_recognition/frontend/static/js/main.4bf8280e.js",
     "static/js/787.593e211c.chunk.js": "/sign_language_recognition/frontend/static/js/787.593e211c.chunk.js",
     "static/media/count.wav": "/sign_language_recognition/frontend/static/media/count.f89c5fa1380233c226e7.wav",
     "static/media/E.png": "/sign_language_recognition/frontend/static/media/E.6a4458a0aa0a756ac15d.png",
@@ -14,11 +14,11 @@
     "static/media/G.png": "/sign_language_recognition/frontend/static/media/G.034ce379218199ee3d88.png",
     "index.html": "/sign_language_recognition/frontend/index.html",
     "main.6e469721.css.map": "/sign_language_recognition/frontend/static/css/main.6e469721.css.map",
-    "main.9f50d922.js.map": "/sign_language_recognition/frontend/static/js/main.9f50d922.js.map",
+    "main.4bf8280e.js.map": "/sign_language_recognition/frontend/static/js/main.4bf8280e.js.map",
     "787.593e211c.chunk.js.map": "/sign_language_recognition/frontend/static/js/787.593e211c.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.6e469721.css",
-    "static/js/main.9f50d922.js"
+    "static/js/main.4bf8280e.js"
   ]
 }
