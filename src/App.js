@@ -10,7 +10,7 @@ import './App.css'
 
 export default function App() {
   return (
-    <Router>
+    <Router basename={process.env.PUBLIC_URL}>
       <Routes>
         <Route path='/' element={<Home />}/>
         <Route path='/start' element={<Sign />} />
