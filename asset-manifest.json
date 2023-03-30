@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/sign_language_recognition/static/css/main.2cdb9fb4.css",
-    "main.js": "/sign_language_recognition/static/js/main.57acc613.js",
+    "main.js": "/sign_language_recognition/static/js/main.c172d9e7.js",
     "static/media/intro.png": "/sign_language_recognition/static/media/intro.12c5e4815c0931f8fe5e.png",
     "static/media/A.png": "/sign_language_recognition/static/media/A.be1f02cf527a9c85bbcb.png",
     "static/media/E.png": "/sign_language_recognition/static/media/E.6a4458a0aa0a756ac15d.png",
@@ -16,10 +16,10 @@
     "static/media/H.png": "/sign_language_recognition/static/media/H.fcdf71756175ef022e14.png",
     "index.html": "/sign_language_recognition/index.html",
     "main.2cdb9fb4.css.map": "/sign_language_recognition/static/css/main.2cdb9fb4.css.map",
-    "main.57acc613.js.map": "/sign_language_recognition/static/js/main.57acc613.js.map"
+    "main.c172d9e7.js.map": "/sign_language_recognition/static/js/main.c172d9e7.js.map"
   },
   "entrypoints": [
     "static/css/main.2cdb9fb4.css",
-    "static/js/main.57acc613.js"
+    "static/js/main.c172d9e7.js"
   ]
 }
