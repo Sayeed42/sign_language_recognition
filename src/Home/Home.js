@@ -8,15 +8,7 @@ export default function Home() {
     return (
         <div className='home-container'>
             <div className='home-header'>
-                <h1 className='home-heading'>CS6724</h1>
-                <Link to='/about'>
-                    <button 
-                        className="btn btn-secondary" 
-                        id="about-btn"
-                    >
-                        About
-                    </button>
-                </Link>
+                <h1 className='home-heading'>CS6724 Human-AI Interaction</h1>
             </div>
 
             <h1 className="description">Interactive Sign Language
@@ -28,12 +20,6 @@ Learning System</h1>
                             className="btn start-btn"
                         >Let's Start</button>
                     </Link>
-                    <Link to='/tutorials'>
-                        <button
-                            className="btn start-btn"
-                        >Tutorials</button>
-                    </Link>
-
                 </div>
             </div>
         </div>

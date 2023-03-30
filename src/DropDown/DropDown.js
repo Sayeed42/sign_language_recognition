@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { poseImages } from '../../utils/pose_images'
+import { poseImages } from '../pose_images'
 
 import './DropDown.css'
 

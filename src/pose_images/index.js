@@ -6,6 +6,7 @@ import n from './N.png'
 import r from './R.png'
 import s from './S.png'
 import t from './T.png'
+import h from './H.png'
 
 export const poseImages = {
     D: d,
@@ -15,7 +16,8 @@ export const poseImages = {
     N: n,
     R: r,
     S: s,
-    T: t
+    T: t,
+    H: h,
 } 
 
 
