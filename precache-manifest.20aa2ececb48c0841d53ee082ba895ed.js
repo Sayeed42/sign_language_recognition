@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "ed9c58402d8d3332bbfa",
+    "revision": "3973cc18b2bf552549e1",
     "url": "/sign_language_recognition/static/css/main.9ecd8be4.chunk.css"
   },
   {
-    "revision": "ed9c58402d8d3332bbfa",
-    "url": "/sign_language_recognition/static/js/main.ed9c5840.chunk.js"
+    "revision": "3973cc18b2bf552549e1",
+    "url": "/sign_language_recognition/static/js/main.3973cc18.chunk.js"
   },
   {
     "revision": "14b5cda074506ef6cc65",
@@ -64,7 +64,7 @@ self.__precacheManifest = [
     "url": "/sign_language_recognition/static/media/intro.752cb5e0.png"
   },
   {
-    "revision": "0f9aaa133298ad14f6543b047fc81670",
+    "revision": "51f5726626cc6e5cb02564fd8154cc8a",
     "url": "/sign_language_recognition/index.html"
   }
 ];
