@@ -85,7 +85,7 @@ function App2() {
 
 
   const [bestPerform, setBestPerform] = useState('A')
-  const [currentPose, setCurrentPose] = useState('H')
+  const [currentPose, setCurrentPose] = useState('G')
   const [isStartPose, setIsStartPose] = useState(false)
 
   function startSign(){
