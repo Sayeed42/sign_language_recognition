@@ -19,8 +19,7 @@ import { poseImages } from './pose_images';
 
 
 let poseList = [
-  'S', 'D', 'E', 'T', 'G',
-  'N', 'R'
+  'A', 'G', 'H', 'T', 'P'
 ]
 
 const CLASS_NO = {
@@ -30,6 +29,8 @@ const CLASS_NO = {
 3:'T',
 4:'P',
 }
+
+let interval
 
 const style1 = {
   0: { color: "yellow", size: 15 },
@@ -95,6 +96,7 @@ function App2() {
 
   function stopPose() {
     setIsStartPose(false)
+    clearInterval(interval)
   }
 
   const runHandpose = async () => {
@@ -103,7 +105,7 @@ function App2() {
     const poseClassifier = await tf.loadLayersModel('https://s3.us-east-2.amazonaws.com/bengalivt.org/model.json')
     console.log("Handpose model loaded.");
     //  Loop and detect hands
-    setInterval(() => {
+    interval = setInterval(() => {
       detect(net, poseClassifier);
     }, 200);
   };
@@ -274,27 +276,21 @@ function App2() {
     )
   }
 
-  else{
     return (
       <div
         className="sign-container"
       >
-        {/* <DropDown
+        <DropDown
           poseList={poseList}
           currentPose={currentPose}
           setCurrentPose={setCurrentPose}
-        /> */}
+        />
         <button
             onClick={startSign}
             className="secondary-btn"  
           >Start Pose</button>
       </div>
     )
-
-  }
-
-  
-
 }
 
 export default App2;
