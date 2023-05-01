@@ -12,6 +12,7 @@ import React, { useRef, useState, useEffect } from 'react'
 import * as tf from "@tensorflow/tfjs";
 import * as handpose from "@tensorflow-models/handpose";
 import Webcam from "react-webcam";
+import Instructions from './Instrctions/Instructions';
 import "./App2.css";
 import { drawHand } from "./utilities";
 import DropDown from './DropDown/DropDown';
@@ -164,7 +165,7 @@ function App2() {
       else{
         setBestPerform('')
       }
-      setCurrentPose(currentPose)
+      // setCurrentPose(currentPose)
       // Draw mesh
       const ctx = canvasRef.current.getContext("2d");
       console.log(pred)
@@ -284,6 +285,9 @@ function App2() {
           poseList={poseList}
           currentPose={currentPose}
           setCurrentPose={setCurrentPose}
+        />
+        <Instructions
+          currentPose={currentPose}
         />
         <button
             onClick={startSign}
