@@ -1,9 +1,9 @@
 {
-  "main.css": "/sign_language_recognition/static/css/main.9ecd8be4.chunk.css",
-  "main.js": "/sign_language_recognition/static/js/main.4a754fe4.chunk.js",
-  "main.js.map": "/sign_language_recognition/static/js/main.4a754fe4.chunk.js.map",
-  "static/js/1.ba6328d1.chunk.js": "/sign_language_recognition/static/js/1.ba6328d1.chunk.js",
-  "static/js/1.ba6328d1.chunk.js.map": "/sign_language_recognition/static/js/1.ba6328d1.chunk.js.map",
+  "main.css": "/sign_language_recognition/static/css/main.0ad1350e.chunk.css",
+  "main.js": "/sign_language_recognition/static/js/main.6ffdf2a9.chunk.js",
+  "main.js.map": "/sign_language_recognition/static/js/main.6ffdf2a9.chunk.js.map",
+  "static/js/1.5e2f5ba4.chunk.js": "/sign_language_recognition/static/js/1.5e2f5ba4.chunk.js",
+  "static/js/1.5e2f5ba4.chunk.js.map": "/sign_language_recognition/static/js/1.5e2f5ba4.chunk.js.map",
   "runtime~main.js": "/sign_language_recognition/static/js/runtime~main.7435da4b.js",
   "runtime~main.js.map": "/sign_language_recognition/static/js/runtime~main.7435da4b.js.map",
   "static/media/D.png": "/sign_language_recognition/static/media/D.6d3ff3c4.png",
@@ -18,8 +18,8 @@
   "static/media/A.png": "/sign_language_recognition/static/media/A.6792e3ad.png",
   "static/media/P.png": "/sign_language_recognition/static/media/P.afcd3416.png",
   "static/media/Home.css": "/sign_language_recognition/static/media/intro.752cb5e0.png",
-  "static/css/main.9ecd8be4.chunk.css.map": "/sign_language_recognition/static/css/main.9ecd8be4.chunk.css.map",
+  "static/css/main.0ad1350e.chunk.css.map": "/sign_language_recognition/static/css/main.0ad1350e.chunk.css.map",
   "index.html": "/sign_language_recognition/index.html",
-  "precache-manifest.4a10901a72b95fcb9b70b9884da09317.js": "/sign_language_recognition/precache-manifest.4a10901a72b95fcb9b70b9884da09317.js",
+  "precache-manifest.0cebbf95a7c76cf84b1fdbf1e4f4ec95.js": "/sign_language_recognition/precache-manifest.0cebbf95a7c76cf84b1fdbf1e4f4ec95.js",
   "service-worker.js": "/sign_language_recognition/service-worker.js"
 }
