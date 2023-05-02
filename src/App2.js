@@ -136,7 +136,7 @@ function App2() {
     //  Loop and detect hands
     interval = setInterval(() => {
       detect(net, poseClassifier);
-    }, 100);
+    }, 50);
   };
 
 
@@ -170,12 +170,24 @@ function App2() {
         const keypoints = hand[i].landmarks;
         // console.log(keypoints)
         const bbox =  hand[i].boundingBox;
+        let topLeft_x = 40000
+        let topLeft_y = 40000
+
+        for (let i = 0; i < keypoints.length; i++) {
+          // Get x point
+          if (keypoints[i][0]<topLeft_x) {
+            topLeft_x = keypoints[i][0]
+          }
+          if (keypoints[i][1]<topLeft_y) {
+            topLeft_y = keypoints[i][1]
+          }
+        }
         // Log hand keypoints.
         for (let i = 0; i < keypoints.length; i++) {
           const [x, y, z] = keypoints[i];
           // console.log(`Keypoint ${i}: [${x}, ${y}, ${z}]`);
-          classification_feature.push(x - bbox.topLeft[0])
-          classification_feature.push(y - bbox.topLeft[1])     
+          classification_feature.push(x - topLeft_x)
+          classification_feature.push(y - topLeft_y)     
         }
       }
       let pred =''
