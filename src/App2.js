@@ -136,7 +136,7 @@ function App2() {
     //  Loop and detect hands
     interval = setInterval(() => {
       detect(net, poseClassifier);
-    }, 200);
+    }, 100);
   };
 
 
@@ -289,18 +289,19 @@ function App2() {
             }}
           >
           </canvas>
-        <div>
+          <div>
             <img 
               src={poseImages[currentPose]}
               className="pose-img"
             />
+            <button
+              onClick={stopPose}
+              className="secondary-btn"    
+            >Stop Pose</button>
           </div>
-         
+ 
         </div>
-        <button
-          onClick={stopPose}
-          className="secondary-btn"    
-        >Stop Pose</button>
+
       </div>
     )
   }

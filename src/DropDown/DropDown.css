@@ -5,13 +5,13 @@
     background-color: white;
 } */
 #pose-dropdown-btn {
-    width: 400px;
+    width: 200px;
 }
 
 
 
 .dropdown-container {
-    display: contents;
+    display: flex;
     justify-content: center;
 }
 /* #pose-dropdown-btn:focus {
@@ -49,6 +49,6 @@
     margin: 20px;
 }
 .dropdown-img {
-    width: 80px;
-    height: 80px;
+    width: 120px;
+    height: 120px;
 }
