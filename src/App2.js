@@ -17,6 +17,7 @@ import "./App2.css";
 import { drawHand } from "./utilities";
 import DropDown from './DropDown/DropDown';
 import { poseImages } from './pose_images';
+import { poseImages_sign } from './pose_images';
 
 
 let poseList = [
@@ -30,6 +31,14 @@ let poseList = [
 // 3:'T',
 // 4:'P',
 // }
+
+const CLASS_NO_SUBSET = {
+  0:'A',
+  1:'E',
+  2:'M',
+  3:'N',
+  4:'S',
+}
 
 const CLASS_NO = {
   0:'A',
@@ -114,7 +123,7 @@ function App2() {
 
 
   const [bestPerform, setBestPerform] = useState('A')
-  const [currentPose, setCurrentPose] = useState('G')
+  const [currentPose, setCurrentPose] = useState('A')
   const [isStartPose, setIsStartPose] = useState(false)
   const [confidence, setConfidence] = useState('')
 
@@ -132,20 +141,26 @@ function App2() {
     const net = await handpose.load();
     
     // const poseClassifier = await tf.loadLayersModel('https://s3.us-east-2.amazonaws.com/bengalivt.org/model.json')
-    //const poseClassifier = await tf.loadLayersModel('https://s3.us-east-2.amazonaws.com/bengalivt.org/sign_model/model.json')
-    const poseClassifier = await tf.loadLayersModel('https://s3.us-east-2.amazonaws.com/bengalivt.org/sign_model/model_all/model.json')
+    const poseClassifier = await tf.loadLayersModel('https://s3.us-east-2.amazonaws.com/bengalivt.org/sign_model/model.json')
+    // const poseClassifier = await tf.loadLayersModel('https://s3.us-east-2.amazonaws.com/bengalivt.org/sign_model/model_all/model.json')
 
     const poseClassifier_subset = await tf.loadLayersModel('https://s3.us-east-2.amazonaws.com/bengalivt.org/sign_model/model_subset/model.json')
     console.log("Handpose model loaded.");
     //  Loop and detect hands
     interval = setInterval(() => {
-      detect(net, poseClassifier);
+      if (currentPose === 'A' || currentPose === 'E' || currentPose === 'M' || currentPose === 'N' || currentPose === 'S') {
+        detect(net, poseClassifier_subset, CLASS_NO_SUBSET);
+      }
+      else {
+        detect(net, poseClassifier, CLASS_NO);
+      }
+      
     }, 100);
   };
 
 
 
-  const detect = async (net, poseClassifier) => {
+  const detect = async (net, poseClassifier, mapping) => {
     // Check data is available
     if (
       typeof webcamRef.current !== "undefined" &&
@@ -203,7 +218,7 @@ function App2() {
         const classification = await poseClassifier.predict(tf.reshape(classification_feature, [1,42]))
         // await classification.array().then(array => console.log(array[0].indexOf(Math.max(...array[0]))));
         classification.array().then(array => pred_conf = Math.max(...array[0]));
-        await classification.array().then(array => {pred = CLASS_NO[array[0].indexOf(Math.max(...array[0]))]});
+        await classification.array().then(array => {pred = mapping[array[0].indexOf(Math.max(...array[0]))]});
         setBestPerform(pred)
         setConfidence(pred_conf.toFixed(2))
         // console.log(classification[1].dataSync())
@@ -314,7 +329,7 @@ function App2() {
           </canvas>
           <div>
             <img 
-              src={poseImages[currentPose]}
+              src={poseImages_sign[currentPose]}
               className="pose-img"
             />
             <button
