@@ -31,7 +31,7 @@
     background: linear-gradient(rgba(0,0,0,0.2), rgba(0, 0, 0, 0.8)), url('../intro.png') ;
     background-repeat: no-repeat;
     background-position: center;
-    background-size:  750px;
+    background-size:  650px;
 }
 
 .description {
