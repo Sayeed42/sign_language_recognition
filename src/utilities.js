@@ -10,17 +10,17 @@ const fingerJoints = {
 // Infinity Gauntlet Style
 
 // Drawing function
-export const drawHand = (predictions, ctx, style) => {
+export const drawHand = (predictions, ctx, style, confidenceScore, width) => {
   // Check if we have predictions
   if (predictions.length > 0) {
     // Loop through each prediction
     predictions.forEach((prediction) => {
       // Grab landmarks
       const landmarks = prediction.landmarks;
-      const bbox = prediction.boundingBox;
+
       let topLeft_x = 40000
       let topLeft_y = 40000
-      let bottomRight_x = 0
+      let bottomRight_x = -50000
       let bottomRight_y = -50000
       for (let i = 0; i < landmarks.length; i++) {
         // Get x point
@@ -41,10 +41,31 @@ export const drawHand = (predictions, ctx, style) => {
       topLeft_y = topLeft_y - 20
       bottomRight_x = bottomRight_x + 20
       bottomRight_y = bottomRight_y + 20
+
+      // const text = `Confidence: ${confidenceScore.toFixed(2)}`; // format the confidence score text
+      // const textWidth = ctx.measureText(text).width; // get the width of the text
+      // const textHeight = 20; // set the height of the text
+      // const textX = topLeft_x + 10; // center the text horizontally on the bounding box
+      // const textY = topLeft_y - 10; // position the text above the bounding box
+
       // Draw Bounding box
       ctx.strokeStyle = 'red';
       ctx.lineWidth = 2;
       ctx.strokeRect(topLeft_x, topLeft_y, bottomRight_x - topLeft_x, bottomRight_y - topLeft_y);
+
+      // // flip the context horizontally to fix mirroring
+      // ctx.translate(textWidth, 0);
+      // ctx.scale(-1, 1);
+
+      // // flip the context back to the original state
+      // //ctx.setTransform(1, 0, 0, 1, 0, 0);
+
+      // // draw the confidence score text
+      // ctx.fillStyle = 'red';
+      // ctx.font = 'bold 16px Arial';
+      // ctx.fillText(text, textX, textY);
+
+      // ctx.setTransform(1, 0, 0, 1, 0, 0);
 
       // Loop through fingers
       for (let j = 0; j < Object.keys(fingerJoints).length; j++) {

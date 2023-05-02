@@ -22,6 +22,8 @@ import v from './V.png'
 import w from './W.png'
 import x from './X.png'
 import y from './Y.png'
+import a1 from './A1.png'
+
 
 export const poseImages = {
     D: d,
@@ -50,6 +52,31 @@ export const poseImages = {
     Y: y,
 } 
 
-
+export const poseImages_sign = {
+    D: d,
+    E: e,
+    G: g,
+    M: m,
+    N: n,
+    R: r,
+    S: s,
+    T: t,
+    H: h,
+    A: a1,
+    P: p,
+    B: b,
+    C: c,
+    F: f,
+    I: i,
+    K: k,
+    L: l,
+    O: o,
+    Q: q,
+    U: u,
+    V: v,
+    W: w,
+    X: x,
+    Y: y,
+} 
 
  
