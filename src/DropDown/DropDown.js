@@ -17,7 +17,8 @@ export default function DropDown({ poseList, currentPose, setCurrentPose }) {
     return (
       <div className='dropdown dropdown-container'>
         <button 
-          className="btn btn-secondary dropdown-toggle"
+          className="btn-secondary dropdown-toggle"
+          id="pose-dropdown-btn"
           type='button'
           onClick={handleToggle}
         >

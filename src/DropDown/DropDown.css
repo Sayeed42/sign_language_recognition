@@ -15,6 +15,9 @@
     background-color: #fff;
     width: 200px;
   }
+  #pose-dropdown-btn:hover {
+    border-color: white;
+}
   
   .dropdown-menu {
     position: absolute;
@@ -36,7 +39,7 @@
     border: 1px solid #ced4da;
     border-radius: 0.25rem;
     overflow: scroll;
-    height: 60vh;
+    height: 54vh;
     scrollbar-width: none;
     -ms-overflow-style: none;
   }
@@ -58,7 +61,7 @@
   }
   
   .dropdown-img {
-    width: 150px;
-    height: 150px;
+    width: 125px;
+    height: 125px;
     object-fit: contain;
   }

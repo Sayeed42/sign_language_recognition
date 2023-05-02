@@ -1,10 +1,18 @@
 import React from 'react'
-
+import { Link } from 'react-router-dom'
 import './Information.css'
 
 export default function Information() {
     return (
         <div className="info-container">
+            <Link to='/'>
+                    <button
+                        className="btn"
+                        id="home-btn"
+                    >
+                        Home
+                    </button>
+            </Link>
             <h1 className="info-heading">Why is it important?</h1>
             <div className="info-main">
                 <p className="info-content">

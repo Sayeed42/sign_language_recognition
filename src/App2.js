@@ -8,6 +8,7 @@
 // 8. Draw functions DONE
 
 import React, { useRef, useState, useEffect } from 'react'
+import { Link } from 'react-router-dom'
 // import logo from './logo.svg';
 import * as tf from "@tensorflow/tfjs";
 import * as handpose from "@tensorflow-models/handpose";
@@ -347,6 +348,14 @@ function App2() {
       <div
         className="sign-container"
       >
+        <Link to='/'>
+          <button
+              className="btn"
+              id="home-btn"
+          >
+              Home
+          </button>
+        </Link>
         <DropDown
           poseList={poseList}
           currentPose={currentPose}
