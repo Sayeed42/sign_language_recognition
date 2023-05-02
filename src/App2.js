@@ -12,7 +12,6 @@ import React, { useRef, useState, useEffect } from 'react'
 import * as tf from "@tensorflow/tfjs";
 import * as handpose from "@tensorflow-models/handpose";
 import Webcam from "react-webcam";
-import Instructions from './Instrctions/Instructions';
 import "./App2.css";
 import { drawHand } from "./utilities";
 import DropDown from './DropDown/DropDown';
@@ -21,7 +20,7 @@ import { poseImages_sign } from './pose_images';
 
 
 let poseList = [
-  'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y'
+  'G', 'H', 'T', 'P', 'K', 'L', 'Q', 'A', 'E', 'M', 'N', 'S', 'C', 'O', 'F', 'R', 'U', 'D', 'I', 'B', 'V', 'W', 'X', 'Y'
 ]
 
 // const CLASS_NO = {
@@ -353,9 +352,6 @@ function App2() {
           currentPose={currentPose}
           setCurrentPose={setCurrentPose}
         />
-        {/* <Instructions
-          currentPose={currentPose}
-        /> */}
         <button
             onClick={startSign}
             className="secondary-btn"  
