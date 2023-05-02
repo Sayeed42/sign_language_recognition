@@ -20,16 +20,43 @@ import { poseImages } from './pose_images';
 
 
 let poseList = [
-  'A', 'G', 'H', 'T', 'P'
+  'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y'
 ]
 
+// const CLASS_NO = {
+// 0:'A',
+// 1:'G',
+// 2:'H',
+// 3:'T',
+// 4:'P',
+// }
+
 const CLASS_NO = {
-0:'A',
-1:'G',
-2:'H',
-3:'T',
-4:'P',
-}
+  0:'A',
+  1:'B',
+  2:'C',
+  3:'D',
+  4:'E',
+  5:'F',
+  6:'G',
+  7:'H',
+  8:'I',
+  9:'K',
+  10:'L',
+  11:'M',
+  12:'N',
+  13:'O',
+  14:'P',
+  15:'Q',
+  16:'R',
+  17:'S',
+  18:'T',
+  19:'U',
+  20:'V',
+  21:'W',
+  22:'X',
+  23:'Y',
+  }
 
 let interval
 
@@ -103,7 +130,8 @@ function App2() {
   const runHandpose = async () => {
     const net = await handpose.load();
     
-    const poseClassifier = await tf.loadLayersModel('https://s3.us-east-2.amazonaws.com/bengalivt.org/model.json')
+    // const poseClassifier = await tf.loadLayersModel('https://s3.us-east-2.amazonaws.com/bengalivt.org/model.json')
+    const poseClassifier = await tf.loadLayersModel('https://s3.us-east-2.amazonaws.com/bengalivt.org/sign_model/model.json')
     console.log("Handpose model loaded.");
     //  Loop and detect hands
     interval = setInterval(() => {
@@ -286,9 +314,9 @@ function App2() {
           currentPose={currentPose}
           setCurrentPose={setCurrentPose}
         />
-        <Instructions
+        {/* <Instructions
           currentPose={currentPose}
-        />
+        /> */}
         <button
             onClick={startSign}
             className="secondary-btn"  

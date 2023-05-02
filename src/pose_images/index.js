@@ -9,6 +9,19 @@ import t from './T.png'
 import h from './H.png'
 import a from './A.png'
 import p from './P.png'
+import b from './B.png'
+import c from './C.png'
+import i from './I.png'
+import k from './K.png'
+import f from './F.png'
+import l from './L.png'
+import o from './O.png'
+import q from './Q.png'
+import u from './U.png'
+import v from './V.png'
+import w from './W.png'
+import x from './X.png'
+import y from './Y.png'
 
 export const poseImages = {
     D: d,
@@ -21,7 +34,20 @@ export const poseImages = {
     T: t,
     H: h,
     A: a,
-    P: p
+    P: p,
+    B: b,
+    C: c,
+    F: f,
+    I: i,
+    K: k,
+    L: l,
+    O: o,
+    Q: q,
+    U: u,
+    V: v,
+    W: w,
+    X: x,
+    Y: y,
 } 
 
 

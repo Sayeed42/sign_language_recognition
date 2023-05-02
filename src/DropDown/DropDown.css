@@ -28,7 +28,7 @@
 
 .dropdown-custom-menu {
     overflow: scroll;
-    height: 30vh;
+    height: 60vh;
     scrollbar-width: none;
     -ms-overflow-style: none;
 }
@@ -46,7 +46,7 @@
 }
 
 .dropdown-item-1 {
-    margin: 10px;
+    margin: 20px;
 }
 .dropdown-img {
     width: 80px;
