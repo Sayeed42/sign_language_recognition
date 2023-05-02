@@ -141,7 +141,7 @@ function App2() {
     const net = await handpose.load();
     
     // const poseClassifier = await tf.loadLayersModel('https://s3.us-east-2.amazonaws.com/bengalivt.org/model.json')
-    const poseClassifier = await tf.loadLayersModel('https://s3.us-east-2.amazonaws.com/bengalivt.org/sign_model/model.json')
+    const poseClassifier = await tf.loadLayersModel('https://s3.us-east-2.amazonaws.com/bengalivt.org/sign_model/model_all/model.json')
     // const poseClassifier = await tf.loadLayersModel('https://s3.us-east-2.amazonaws.com/bengalivt.org/sign_model/model_all/model.json')
 
     const poseClassifier_subset = await tf.loadLayersModel('https://s3.us-east-2.amazonaws.com/bengalivt.org/sign_model/model_subset/model.json')
