@@ -116,6 +116,7 @@ function App2() {
   const [bestPerform, setBestPerform] = useState('A')
   const [currentPose, setCurrentPose] = useState('G')
   const [isStartPose, setIsStartPose] = useState(false)
+  const [confidence, setConfidence] = useState('')
 
   function startSign(){
     setIsStartPose(true) 
@@ -131,12 +132,15 @@ function App2() {
     const net = await handpose.load();
     
     // const poseClassifier = await tf.loadLayersModel('https://s3.us-east-2.amazonaws.com/bengalivt.org/model.json')
-    const poseClassifier = await tf.loadLayersModel('https://s3.us-east-2.amazonaws.com/bengalivt.org/sign_model/model.json')
+    //const poseClassifier = await tf.loadLayersModel('https://s3.us-east-2.amazonaws.com/bengalivt.org/sign_model/model.json')
+    const poseClassifier = await tf.loadLayersModel('https://s3.us-east-2.amazonaws.com/bengalivt.org/sign_model/model_all/model.json')
+
+    const poseClassifier_subset = await tf.loadLayersModel('https://s3.us-east-2.amazonaws.com/bengalivt.org/sign_model/model_subset/model.json')
     console.log("Handpose model loaded.");
     //  Loop and detect hands
     interval = setInterval(() => {
       detect(net, poseClassifier);
-    }, 50);
+    }, 100);
   };
 
 
@@ -156,6 +160,7 @@ function App2() {
       // Set video width
       webcamRef.current.video.width = videoWidth;
       webcamRef.current.video.height = videoHeight;
+      // webcamRef.style.transform = "scale(-1,1)";
 
       // Set canvas height and width
       canvasRef.current.width = videoWidth;
@@ -191,32 +196,35 @@ function App2() {
         }
       }
       let pred =''
+      let pred_conf = 0
       // console.log(classification_feature)
       if (classification_feature.length === 42) {
         console.log(' perform classification')
         const classification = await poseClassifier.predict(tf.reshape(classification_feature, [1,42]))
         // await classification.array().then(array => console.log(array[0].indexOf(Math.max(...array[0]))));
-        classification.array().then(array => console.log(array[0]));
+        classification.array().then(array => pred_conf = Math.max(...array[0]));
         await classification.array().then(array => {pred = CLASS_NO[array[0].indexOf(Math.max(...array[0]))]});
         setBestPerform(pred)
+        setConfidence(pred_conf.toFixed(2))
         // console.log(classification[1].dataSync())
         console.log('classification done')
       }
       else{
         setBestPerform('')
+        setConfidence('')
       }
       // setCurrentPose(currentPose)
       // Draw mesh
       const ctx = canvasRef.current.getContext("2d");
+
       console.log(pred)
-      console.log(currentPose)
       if (pred === currentPose)
       {
-        drawHand(hand, ctx, style2);
+        drawHand(hand, ctx, style2, pred_conf, canvasRef.current.width);
       }
       else
       {
-        drawHand(hand, ctx, style1);
+        drawHand(hand, ctx, style1, pred_conf, canvasRef.current.width);
       }
       
     }
@@ -272,6 +280,9 @@ function App2() {
             </div>
             <div className="pose-performance">
               <h4>Pose Predicted: {bestPerform}</h4>
+            </div>
+            <div className="pose-performance">
+              <h4>Confidence: {confidence}</h4>
             </div>
           </div>
         <div>
