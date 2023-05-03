@@ -1,7 +1,7 @@
 {
   "main.css": "/sign_language_recognition/static/css/main.dd390e93.chunk.css",
-  "main.js": "/sign_language_recognition/static/js/main.d5c0f7fe.chunk.js",
-  "main.js.map": "/sign_language_recognition/static/js/main.d5c0f7fe.chunk.js.map",
+  "main.js": "/sign_language_recognition/static/js/main.745973f4.chunk.js",
+  "main.js.map": "/sign_language_recognition/static/js/main.745973f4.chunk.js.map",
   "static/js/1.5e9ccadc.chunk.js": "/sign_language_recognition/static/js/1.5e9ccadc.chunk.js",
   "static/js/1.5e9ccadc.chunk.js.map": "/sign_language_recognition/static/js/1.5e9ccadc.chunk.js.map",
   "runtime~main.js": "/sign_language_recognition/static/js/runtime~main.7435da4b.js",
@@ -57,6 +57,6 @@
   "static/media/Home.css": "/sign_language_recognition/static/media/intro.752cb5e0.png",
   "static/css/main.dd390e93.chunk.css.map": "/sign_language_recognition/static/css/main.dd390e93.chunk.css.map",
   "index.html": "/sign_language_recognition/index.html",
-  "precache-manifest.bf875afc4424104131c8f929dd8c00d3.js": "/sign_language_recognition/precache-manifest.bf875afc4424104131c8f929dd8c00d3.js",
+  "precache-manifest.5d0fb0d948bb9a85dedfc6e6327cfcca.js": "/sign_language_recognition/precache-manifest.5d0fb0d948bb9a85dedfc6e6327cfcca.js",
   "service-worker.js": "/sign_language_recognition/service-worker.js"
 }
