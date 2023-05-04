@@ -48,6 +48,32 @@ import w1 from './W1.png'
 import x1 from './X1.png'
 import y1 from './Y1.png'
 
+import d2 from './D2.png'
+import e2 from './E2.png'
+import g2 from './G2.png'
+import m2 from './M2.png'
+import n2 from './N2.png'
+import r2 from './R2.png'
+import s2 from './S2.png'
+import t2 from './T2.png'
+import h2 from './H2.png'
+import a2 from './A2.png'
+import p2 from './P2.png'
+import b2 from './B2.png'
+import c2 from './C2.png'
+import i2 from './I2.png'
+import k2 from './K2.png'
+import f2 from './F2.png'
+import l2 from './L2.png'
+import o2 from './O2.png'
+import q2 from './Q2.png'
+import u2 from './U2.png'
+import v2 from './V2.png'
+import w2 from './W2.png'
+import x2 from './X2.png'
+import y2 from './Y2.png'
+
+
 
 export const poseImages = {
     D: d,
@@ -101,6 +127,30 @@ export const poseImages_sign = {
     W: w1,
     X: x1,
     Y: y1,
+    D1: d2,
+    E1: e2,
+    G1: g2,
+    M1: m2,
+    N1: n2,
+    R1: r2,
+    S1: s2,
+    T1: t2,
+    H1: h2,
+    A1: a2,
+    P1: p2,
+    B1: b2,
+    C1: c2,
+    F1: f2,
+    I1: i2,
+    K1: k2,
+    L1: l2,
+    O1: o2,
+    Q1: q2,
+    U1: u2,
+    V1: v2,
+    W1: w2,
+    X1: x2,
+    Y1: y2,
 } 
 
  

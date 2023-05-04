@@ -18,7 +18,8 @@ import { drawHand } from "./utilities";
 import DropDown from './DropDown/DropDown';
 import { poseImages } from './pose_images';
 import { poseImages_sign } from './pose_images';
-
+import a2 from './pose_images/A2.png';
+import a1 from './pose_images/A1.png';
 
 let poseList = [
   'G', 'H', 'T', 'P', 'K', 'L', 'Q', 'A', 'E', 'M', 'N', 'S', 'C', 'O', 'F', 'R', 'U', 'D', 'I', 'B', 'V', 'W', 'X', 'Y'
@@ -126,6 +127,7 @@ function App2() {
   const [currentPose, setCurrentPose] = useState('A')
   const [isStartPose, setIsStartPose] = useState(false)
   const [confidence, setConfidence] = useState('')
+  // const [isPoseA, setIsPoseA] = useState(false)
 
   function startSign(){
     setIsStartPose(true) 
@@ -148,6 +150,11 @@ function App2() {
     console.log("Handpose model loaded.");
     //  Loop and detect hands
     interval = setInterval(() => {
+      // if (currentPose === 'A')
+      // {
+      //   setIsPoseA(true);
+      // }
+      
       if (currentPose === 'A' || currentPose === 'E' || currentPose === 'M' || currentPose === 'N' || currentPose === 'S') {
         detect(net, poseClassifier_subset, CLASS_NO_SUBSET);
       }
@@ -239,7 +246,8 @@ function App2() {
       }
       else
       {
-        drawHand(hand, ctx, style1, pred_conf, canvasRef.current.width);
+        setConfidence('')
+        drawHand(hand, ctx, style1, '', canvasRef.current.width);
       }
       
     }
@@ -287,6 +295,7 @@ function App2() {
 
 
   if(isStartPose) {
+
     return (
       <div className="sign-container">
         <div className="performance-container">
@@ -332,12 +341,15 @@ function App2() {
               src={poseImages_sign[currentPose]}
               className="pose-img"
             />
-            <button
+            <img 
+              src={poseImages_sign[currentPose+'1']}
+              className="pose-img2"
+            />
+          </div>
+          <button
               onClick={stopPose}
               className="secondary-btn"    
             >Stop Pose</button>
-          </div>
- 
         </div>
 
       </div>
@@ -363,7 +375,7 @@ function App2() {
         />
         <button
             onClick={startSign}
-            className="secondary-btn"  
+            className="secondary-btn2"  
           >Start Pose</button>
       </div>
     )

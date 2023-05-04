@@ -6,7 +6,22 @@
 
 .secondary-btn {
     position: absolute;
-    right: 620px;
+    right: 980px;
+    top: 650px;
+    width: 530px;
+    /* left: 45%; */
+    padding: 10px 20px 10px 20px;
+    border-radius: 5px;
+    border-color: rgba(125, 125, 125, 0.1);
+    border-width: 5px;
+    background-color: rgba(234, 13, 13, 0.2);
+    box-shadow: 0px 0px 0px 0px;
+    color: white;
+}
+
+.secondary-btn2 {
+    position: absolute;
+    right: 580px;
     top: 650px;
     width: 530px;
     /* left: 45%; */
@@ -65,7 +80,15 @@
     right: 120px;
     top: 80px;
     width: 500px;
-    aspect-ratio: 1;
+    aspect-ratio: 1.5;
+}
+
+.pose-img2 {
+    position: absolute;
+    right: 120px;
+    top: 420px;
+    width: 500px;
+    aspect-ratio: 1.5;
 }
 
 .performance-container {
